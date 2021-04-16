@@ -80,17 +80,19 @@ class Play extends Phaser.Scene{
         if(this.checkCollision(this.p1Rocket, this.ship03)) {
             this.p1Rocket.reset();
             this.shipExplode(this.ship03);
+            
 
         }
         if (this.checkCollision(this.p1Rocket, this.ship02)) {
             this.p1Rocket.reset();
             this.shipExplode(this.ship02);
+            
 
         }
         if (this.checkCollision(this.p1Rocket, this.ship01)) {
             this.p1Rocket.reset();
             this.shipExplode(this.ship01);
-
+        
         }
         if (!this.gameOver) {               
             this.p1Rocket.update();         // update rocket sprite
@@ -126,5 +128,6 @@ class Play extends Phaser.Scene{
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;   
         this.sound.play('sfx_explosion');
+        Phaser.Time.Clock.delayedCall;
     }      
 }
