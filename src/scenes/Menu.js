@@ -25,10 +25,14 @@ class Menu extends Phaser.Scene {
         }
         // this.add.text(20,20,"Rocket Patrol Menu");
         //this.scene.start("playScene");
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'REVENGE OF BATTLEZONE', menuConfig).setOrigin(0.5);
-        this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
-        menuConfig.color = '#39FF14';
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 -borderUISize - borderPadding - 100, 'REVENGE', menuConfig).setOrigin(0.5);
+        menuConfig.fontSize = '22px';
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding- 50, 'of', menuConfig).setOrigin(0.5);
+        menuConfig.fontSize = '28px';
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'BATTLEZONE', menuConfig).setOrigin(0.5);
+        menuConfig.fontSize = '18px';
+        this.add.text(game.config.width/2, game.config.height/2 + 50, 'Use <--> arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding + 100, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5);
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
