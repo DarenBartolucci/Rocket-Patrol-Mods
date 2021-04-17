@@ -43,8 +43,8 @@ class Play extends Phaser.Scene{
         let scoreConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
+            backgroundColor: '#000000',
+            color: '#39FF14',
             align: 'right',
             padding: {
                 top: 5,
@@ -128,6 +128,6 @@ class Play extends Phaser.Scene{
         this.p1Score += ship.points;
         this.scoreLeft.text = this.p1Score;   
         this.sound.play('sfx_explosion');
-        this.clock.delay += 10000;
+        this.clock.delay += 5000;
     }      
 }

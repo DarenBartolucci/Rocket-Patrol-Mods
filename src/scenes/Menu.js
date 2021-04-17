@@ -14,8 +14,8 @@ class Menu extends Phaser.Scene {
         let menuConfig = {
             fontFamily: 'Courier',
             fontSize: '28px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
+            backgroundColor: '#000000',
+            color: '#39FF14',
             align: 'right',
             padding: {
                 top: 5,
@@ -25,9 +25,9 @@ class Menu extends Phaser.Scene {
         }
         // this.add.text(20,20,"Rocket Patrol Menu");
         //this.scene.start("playScene");
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'REVENGE OF BATTLEZONE', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2, 'Use <--> arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
-        menuConfig.color = '#000';
+        menuConfig.color = '#39FF14';
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press <- for Novice or -> for Expert', menuConfig).setOrigin(0.5);
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
