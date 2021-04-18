@@ -13,6 +13,8 @@ class Play extends Phaser.Scene{
         this.load.image('Fast_enemy', './assets/Fast_enemy.png')
         // load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+        this.load.spritesheet('New_explosion', './assets/New_explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 7}
+        );
     }
     create(){
         // green UI background
@@ -41,8 +43,8 @@ class Play extends Phaser.Scene{
         // animation config
         this.anims.create({
             key: 'explode',
-            frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
-            frameRate: 30
+            frames: this.anims.generateFrameNumbers('New_explosion', { start: 0, end: 7, first: 0}),
+            frameRate: 20
         });
         // initialize score
         this.p1Score = 0;
@@ -132,7 +134,7 @@ class Play extends Phaser.Scene{
         // temporarily hide ship
         ship.alpha = 0;
         // create explosion sprite at ship's position
-        let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
+        let boom = this.add.sprite(ship.x, ship.y, 'New_explosion').setOrigin(0, 0);
         boom.anims.play('explode');             // play explode animation
         boom.on('animationcomplete', () => {    // callback after anim completes
           ship.reset();                         // reset ship position
