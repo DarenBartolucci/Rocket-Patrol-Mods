@@ -25,4 +25,4 @@ let keyF, keyR, keyLEFT, keyRIGHT;
 //New sprite work for everything (20)
 //Change in art and behavior for weapon (faster) (20)
 //Changed titlescreen with new art (10)
-
+//Thank you to Ishaan Paranjape for helping with timer by sending a resource about phaser during your office hours
