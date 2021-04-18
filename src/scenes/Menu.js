@@ -9,6 +9,7 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx_select', './assets/Blip_Select.wav');
         this.load.audio('sfx_explosion', './assets/Explosion.wav');
         this.load.audio('sfx_rocket', './assets/Fire.wav');
+        this.load.image('Menu_tank', './assets/New_sprite_2.png');
     }      
     create(){
         let menuConfig = {
@@ -36,6 +37,7 @@ class Menu extends Phaser.Scene {
         // define keys
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
         keyRIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
+        this.add.tileSprite(320, 240, 64, 32, 'Menu_tank');
 
     }
     update() {
